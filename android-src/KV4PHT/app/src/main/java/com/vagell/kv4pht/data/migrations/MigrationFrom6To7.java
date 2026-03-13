@@ -31,8 +31,8 @@ public class MigrationFrom6To7 extends Migration {
 
 		
 		
-				// ערוצי DUPLEX (תדר שידור שונה מתדר קליטה - Offset של 4.6MHz)
-		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH01 Port Ops', '160.6500', 'Marine VHF', 1, 'None', 'None', -4600, 0)");
+		// ערוצי DUPLEX (תדר שידור שונה מתדר קליטה - Offset של 4.6MHz)
+/*		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH01 Port Ops', '160.6500', 'Marine VHF', 1, 'None', 'None', -4600, 0)");
 		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH02 Public', '160.7000', 'Marine VHF', 1, 'None', 'None', -4600, 0)");
 		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH03 Public', '160.7500', 'Marine VHF', 1, 'None', 'None', -4600, 0)");
 		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH04 Port/VTS', '160.8000', 'Marine VHF', 1, 'None', 'None', -4600, 0)");
@@ -40,7 +40,7 @@ public class MigrationFrom6To7 extends Migration {
 		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH07 General', '160.9500', 'Marine VHF', 1, 'None', 'None', -4600, 0)");
 		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH18 Public', '161.5000', 'Marine VHF', 1, 'None', 'None', -4600, 0)");
 		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH20 Port Ops', '161.6000', 'Marine VHF', 1, 'None', 'None', -4600, 0)");
-
+*/
 		// ערוצי SIMPLEX (תדר שידור וקליטה זהים - Offset 0)
 		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH06 Inter-ship', '156.3000', 'Marine VHF', 0, 'None', 'None', 0, 0)");
 		database.execSQL("INSERT INTO channel_memories (name, frequency, 'group', offset, tx_tone, rx_tone, offset_khz, skip_during_scan) VALUES ('CH08 Inter-ship', '156.4000', 'Marine VHF', 0, 'None', 'None', 0, 0)");
