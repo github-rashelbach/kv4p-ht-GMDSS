@@ -89,12 +89,12 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void populateMinFrequencies() {
-        setDropdownOptions(R.id.min2mFreqTextView, List.of("144MHz"));
+        setDropdownOptions(R.id.min2mFreqTextView, List.of("134Mhz","144MHz"));
         setDropdownOptions(R.id.min70cmFreqTextView, List.of("420MHz", "430MHz"));
     }
 
     private void populateMaxFrequencies() {
-        setDropdownOptions(R.id.max2mFreqTextView, List.of("148MHz", "146MHz"));
+        setDropdownOptions(R.id.max2mFreqTextView, List.of("174Mhz", "148MHz", "146MHz"));
         setDropdownOptions(R.id.max70cmFreqTextView, List.of("450MHz", "440MHz"));
     }
 
