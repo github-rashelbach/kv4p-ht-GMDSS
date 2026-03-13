@@ -377,7 +377,7 @@
                             android:padding="0dp"
                             android:layout_weight="1"
                             android:inputType="none"
-                            android:text="144MHz"
+                            android:text="134MHz"
                             android:textSize="20dp"
                             android:textColor="@color/primary"/>
                     </com.google.android.material.textfield.TextInputLayout>
@@ -416,7 +416,7 @@
                             android:padding="0dp"
                             android:layout_weight="1"
                             android:inputType="none"
-                            android:text="148MHz"
+                            android:text="174MHz"
                             android:textSize="20dp"
                             android:textColor="@color/primary"/>
                     </com.google.android.material.textfield.TextInputLayout>

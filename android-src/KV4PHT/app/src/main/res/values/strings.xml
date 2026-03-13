@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">kv4p HT</string>
+    <string name="app_name">kv4p HT GMDSS</string>
     <!-- Strings used for fragments for navigation -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
@@ -28,13 +28,13 @@
     <string name="firmware_update_display">Firmware update</string>
     <string name="connecting_to_bootloader_display">Connecting to bootloader...</string>
     <string name="cancel_display1">Cancel</string>
-    <string name="firmware_update_01">Photo of the bottom of the kv4p HT PCB, showing the reset button on the left, and the boot button on the right.</string>
-    <string name="firmware_update_02">Keep your kv4p HT plugged into your phone, and push these buttons:\n\n1. Hold “Boot”\n2. Press and release “Reset”\n3. Release “Boot”\n4. Wait about 30 seconds for it to connect</string>
-    <string name="firmware_update_03">Keep your phone screen on, this app open, and don’t unplug your kv4p HT until flashing is done.\n\nThis usually takes about 30 seconds.</string>
+    <string name="firmware_update_01">Photo of the bottom of the kv4p HT GMDSS PCB, showing the reset button on the left, and the boot button on the right.</string>
+    <string name="firmware_update_02">Keep your kv4p HT GMDSS plugged into your phone, and push these buttons:\n\n1. Hold “Boot”\n2. Press and release “Reset”\n3. Release “Boot”\n4. Wait about 30 seconds for it to connect</string>
+    <string name="firmware_update_03">Keep your phone screen on, this app open, and don’t unplug your kv4p HT GMDSS until flashing is done.\n\nThis usually takes about 30 seconds.</string>
     <string name="add_memory_display1">Add memory</string>
     <string name="to_display">To:</string>
     <string name="all_memories_display1">ALL MEMORIES ▼</string>
-    <string name="kv4p_ht" translatable="false">kv4p HT</string>
+    <string name="kv4p_ht" translatable="false">kv4p HT GMDSS</string>
     <string name="vhf" translatable="false">VHF</string>
     <string name="uhf" translatable="false">UHF</string>
     <string name="push_to_talk_display">Push to talk</string>
@@ -78,8 +78,8 @@
     <string name="delete">Delete</string>
     <string name="simplex">Simplex</string>
     <string name="memory_menu">Memory menu</string>
-    <string name="radio_not_found">kv4p HT radio not found, plugged in?</string>
-    <string name="handshake_message">Looking for kv4p HT radio...</string>
+    <string name="radio_not_found">kv4p HT GMDSS radio not found, plugged in?</string>
+    <string name="handshake_message">Looking for kv4p HT GMDSS radio...</string>
     <string name="module_not_found_message">Radio module not responding to ESP32, check PCB solder joints</string>
     <string name="no_firmware_installed">No firmware installed</string>
     <string name="new_firmware_available">New firmware available</string>
@@ -115,6 +115,6 @@
     </string-array>
     <string name="mhz">MHz</string>
     <string name="flash_firmware_title">Flash firmware?</string>
-    <string name="flash_firmware_message">This will replace the firmware on your kv4p HT.</string>
+    <string name="flash_firmware_message">This will replace the firmware on your kv4p HT GMDSS.</string>
     <string name="flash_firmware_button">Flash</string>
 </resources>
