@@ -1,7 +1,19 @@
 /*
 kv4p HT (see http://kv4p.com)
 Copyright (C) 2024 Vance Vagell
-... (license header remains the same)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 package com.vagell.kv4pht.data;
@@ -21,7 +33,7 @@ import com.vagell.kv4pht.data.migrations.*;
  * Singleton Room database for kv4p HT application.
  */
 @Database(
-    version = 8,
+    version = 8,   // You can bump to 9 later if you want
     entities = {AppSetting.class, ChannelMemory.class, APRSMessage.class}
 )
 @SuppressWarnings("java:S6548")
@@ -38,7 +50,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public static final Migration MIGRATION_4_5 = new MigrationFrom4To5();
     public static final Migration MIGRATION_5_6 = new MigrationFrom5To6();
     public static final Migration MIGRATION_6_7 = new MigrationFrom6To7();
-    public static final Migration MIGRATION_7_8 = new MigrationFrom7To8();
+    // MIGRATION_7_8 was deleted → removed from here
 
     @SuppressWarnings({"java:S3077", "java:S3008"})
     private static volatile AppDatabase INSTANCE;
@@ -71,9 +83,22 @@ public abstract class AppDatabase extends RoomDatabase {
                     DatabaseSeeder.seedDefaultMarineChannels(db);
                 }
             })
-            // .fallbackToDestructiveMigration()  // ← ONLY for debugging! Remove in production
+            // .fallbackToDestructiveMigration()  // Remove in production
             .build();
     }
 
-    // ... rest of your methods (saveAppSetting etc.)
+    /**
+     * Save or update an app setting.
+     */
+    public void saveAppSetting(String key, String value) {
+        AppSettingDao dao = appSettingDao();
+        AppSetting setting = dao.getByName(key);
+        if (setting == null) {
+            setting = new AppSetting(key, value);
+            dao.insertAll(setting);
+        } else {
+            setting.value = value;
+            dao.update(setting);
+        }
+    }
 }
