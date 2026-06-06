@@ -1,0 +1,12 @@
+3d-print-case/
+microcontroller-src/
+pcb/
+website-src/
+node_modules/
+dist/
+build/
+*.log
+*.min.*
+coverage/
+.git/
+*.tmp
